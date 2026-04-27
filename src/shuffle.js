@@ -1,20 +1,16 @@
-//TODO
-//Note: You will not be able to run parcel without first fixing these errors
-//Note: Complete TODO in utilityRenderFunctions.js first. 
-// Check for ESLint errors and format with Prettier.
-// This function is responsible for shuffling the flashcards.
-// While the function is mostly correct, there are some errors.
-// Use ESLint to identify the errors and Prettier to format the code.
+// shuffles an array of flashcards using the Fisher-Yates algorithm
 const shuffle = (cards) => {
-  var current = cards.length
-  var newCardsArray = [...cards
-  while (current != 0) {
-    le randomIndex = Math.floor(Math.random() * current)
-    current--
-
-    [newCardsArray[current], newCardsArray[randomIndex]] = [newCardsArray[randomIndex],newCardsArray[current],]
+  let current = cards.length;
+  const newCardsArray = [...cards];
+  while (current !== 0) { 
+    let randomIndex = Math.floor(Math.random() * current); 
+    current--;
+    [newCardsArray[current], newCardsArray[randomIndex]] = [
+      newCardsArray[randomIndex],
+      newCardsArray[current],
+    ];
   }
-  return newCardsArray
-}
+  return newCardsArray;
+};
 
-export { shuffle }
+export { shuffle };
