@@ -1,108 +1,81 @@
-/* TODO: Manually optimize CSS styling. */
-/* Remove unused and unnecessary styling and selectors */
-/* About page Styling */
-body main div .aboutContainer {
+.aboutContainer {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
+  padding: 2rem;
 }
 
-body main div .aboutContainer {}
-
-body main div .aboutContainer img {
-  width: 400px;
-  height: 300px;
-  border-radius: 10%;
+.aboutContainer img {
+  width: 360px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 2rem;
+  border: 1px solid #4cc9f033;
+  box-shadow: 0 0 40px rgba(76, 201, 240, 0.1);
 }
 
-body main div .textContainer {
-  width: 550px;
+.textContainer {
+  max-width: 520px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  padding: 0 20px 20px 50px;
+  gap: 1rem;
+}
+
+.textContainer h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #4cc9f0, #4361ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.textContainer h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #7bed9f;
+}
+
+.textContainer p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #94a3b8;
   white-space: pre-wrap;
 }
 
-body main div .textContainer h2 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-body main .textContainer h3 {
-  font-size: 2rem;
-}
-
-body main .textContainer p {
-  font-size: 1.5rem;
-}
-
-
-
-/* Media Query for Tablets (768px and below) */
 @media (max-width: 768px) {
   .aboutContainer {
     flex-direction: column;
-    padding: 20px;
-  }
-
-  .aboutContainer img {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  .textContainer {
-    width: 90%;
-    padding: 0 10px;
-    align-items: center;
-  }
-
-  .textContainer h2 {
-    font-size: 2.5rem;
-  }
-
-  .textContainer h3 {
-    font-size: 1.8rem;
-  }
-
-  .textContainer p {
-    font-size: 1.2rem;
-  }
-}
-
-/* Media Query for Mobile Devices (480px and below) */
-@media (max-width: 480px) {
-  .aboutContainer {
-    flex-direction: column;
-    padding: 10px;
+    padding: 1.5rem;
   }
 
   .aboutContainer img {
     width: 100%;
     height: auto;
-    margin-bottom: 15px;
   }
 
   .textContainer {
     width: 100%;
-    padding: 0 15px;
-    align-items: center;
   }
 
   .textContainer h2 {
     font-size: 2rem;
   }
+}
+
+@media (max-width: 480px) {
+  .textContainer h2 {
+    font-size: 1.6rem;
+  }
 
   .textContainer h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .textContainer p {
-    font-size: 1rem;
-    text-align: center;
+    font-size: 0.9rem;
   }
 }

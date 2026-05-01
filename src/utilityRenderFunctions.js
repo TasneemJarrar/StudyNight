@@ -8,7 +8,7 @@ const createElement = (elementType, text) => {
 // Creates an image element with alt text
 const createImage = (url, alt) => {
   const img = document.createElement("img");
-  img.src = url;
+  img.src = url.href || url; 
   img.alt = alt;
   return img;
 };

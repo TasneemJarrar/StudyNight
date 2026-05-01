@@ -1,63 +1,58 @@
-/* Home Container Styling */
 .homeContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
   text-align: center;
+  gap: 1.5rem;
+  padding: 2rem;
 }
 
-/* Image Styling */
-.homeContainer img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin-top: 20px;
-  filter: brightness(70%);
-}
-
-/* Header and Subheader Styling */
 .homeContainer h1 {
-  font-size: 3rem;
-  margin: 0;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #4cc9f0, #4361ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .homeContainer h2 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #94a3b8;
 }
 
-/* Media Query for Tablets (768px and below) */
+.homeContainer img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  border-radius: 2rem;
+  border: 1px solid #4361ee33;
+  box-shadow: 0 0 60px rgba(67, 97, 238, 0.15);
+}
+
 @media (max-width: 768px) {
   .homeContainer h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .homeContainer h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .homeContainer img {
-    max-width: 500px;
-    margin-top: 15px;
+    border-radius: 1.2rem;
   }
 }
 
-/* Media Query for Mobile Devices (480px and below) */
 @media (max-width: 480px) {
   .homeContainer h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .homeContainer h2 {
-    font-size: 1.2rem;
-  }
-
-  .homeContainer img {
-    max-width: 100%;
-    margin-top: 10px;
+    font-size: 0.95rem;
   }
 }

@@ -1,36 +1,37 @@
-/* TODO: Manually optimize CSS styling. */
-/* Remove unused and unnecessary styling and selectors */
-/* Card Set Styling */
-body main div .cardSets {
+.cardSets {
   width: 85%;
-  height: 100%;
-  margin: 5%;
-  padding: 10px;
-  border: 2px solid lightgray;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px lightgray;
+  margin: 0.6rem auto;
+  padding: 1.2rem 1.5rem;
+  background: #161b27;
+  border: 1px solid #ffffff0d;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  color: #e2e8f0;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
-body main div .cardSets:hover {
-  border-color: black;
+.cardSets:hover {
+  transform: translateY(-3px);
+  border-color: #4cc9f044;
+  box-shadow: 0 8px 25px rgba(76, 201, 240, 0.1);
 }
 
-/* Flip Card Styling */
-body main div .cardContainer {
+.cardContainer {
   background-color: transparent;
   width: 500px;
-  height: 380px;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 320px;
+  margin: 1rem;
+  perspective: 1000px;
 }
 
-body main div.innerCard {
+.innerCard {
   position: relative;
   width: 100%;
   height: 100%;
@@ -43,84 +44,88 @@ body main div.innerCard {
   transform: rotateY(180deg);
 }
 
-/* Term and Description Styling */
 .term,
 .description {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10%;
-  border: solid grey;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  padding: 1.5rem;
 }
 
 .term {
   font-size: 2rem;
+  font-weight: 800;
+  background: #161b27;
+  border: 1px solid #4361ee44;
+  color: #4cc9f0;
+  box-shadow: 0 0 30px rgba(67, 97, 238, 0.1);
 }
 
-body main div .description {
-  font-size: 1.5rem;
-  background-color: #dce7e8;
+.description {
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: #0e1117;
+  border: 1px solid #7bed9f44;
+  color: #7bed9f;
   transform: rotateY(180deg);
+  box-shadow: 0 0 30px rgba(123, 237, 159, 0.1);
 }
 
-/* Page and Container Layout */
-body main div .cardPageContainer {
-  width: 500px;
+.cardPageContainer {
+  width: 560px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-}
-
-.cardPageContainer button {
-  margin: 3%;
+  align-items: center;
+  gap: 1rem;
 }
 
 .cardPageContainer h2 {
   text-align: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #4cc9f0, #4361ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .setContainer {
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
-/* Navigation Buttons Styling */
 .nextAndPrevBtnContainer {
   display: flex;
-  justify-content: space-around;
-  margin: 5%;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 .nextAndPrevBtnContainer button {
   width: 45%;
 }
 
-/* Miscellaneous */
-.toggle_form {
-  text-align: center;
-}
-
-/* Media Query for Tablets (768px and below) */
 @media (max-width: 768px) {
   .cardContainer {
     width: 90%;
-    height: 200px;
+    height: 220px;
   }
 
   .term {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .description {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .cardPageContainer {
@@ -134,11 +139,9 @@ body main div .cardPageContainer {
 
   .nextAndPrevBtnContainer button {
     width: 80%;
-    margin: 5px 0;
   }
 }
 
-/* Media Query for Mobile Devices (480px and below) */
 @media (max-width: 480px) {
   .cardContainer {
     width: 100%;
@@ -146,25 +149,14 @@ body main div .cardPageContainer {
   }
 
   .term {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .description {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .cardPageContainer {
     width: 100%;
-  }
-
-  .nextAndPrevBtnContainer {
-    flex-direction: column;
-    align-items: center;
-    margin: 5%;
-  }
-
-  .nextAndPrevBtnContainer button {
-    width: 90%;
-    margin: 5px 0;
   }
 }

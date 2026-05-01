@@ -1,0 +1,26 @@
+{
+  "name": "study-night",
+  "version": "1.0.0",
+  "description": "A flashcard study application",
+  "license": "MIT",
+  "type": "module",
+  "source": "index.html",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "chai": "^6.2.2",
+    "cypress": "^15.14.1",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0",
+    "gulp": "^5.0.1",
+    "gulp-cli": "^3.1.0",
+    "gulp-shell": "^0.8.0",
+    "mocha": "^11.7.5",
+    "parcel": "^2.16.4"
+  },
+  "mocha": {
+    "spec": "test/**/*.js"
+  }
+}
