@@ -6,7 +6,9 @@
   "type": "module",
   "source": "index.html",
   "scripts": {
-    "gulp": "gulp"
+  "gulp": "gulp",
+  "test": "npx mocha test/shuffle.js",
+  "cypress": "npx cypress run"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
